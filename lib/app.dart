@@ -2,13 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_eschool/commons/Sidebar.dart';
-import 'package:flutter_eschool/views/auth/login/login_view.dart';
-import 'package:flutter_eschool/views/home_view.dart';
+import 'package:flutter_eschool/configs/route.dart';
 import 'package:flutter_eschool/views/layouts/navbar/main_navbar.dart';
 import 'package:flutter_eschool/views/layouts/partials/nav_action.dart';
 import 'package:get/get.dart';
 import 'package:flutter_eschool/views/layouts/sidebar/main_sidebar.dart';
-
 
 void main() {
   runApp(App());
@@ -21,19 +19,14 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       initialRoute: '/login',
-      getPages: [
-        GetPage(name: '/home', page: () => HomeView()),
-        GetPage(name: '/login', page: () => LoginView()),
-
-      ],
+      getPages: RoutesConfig.pages,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Row(
           children: [
             Obx(
               () => Visibility(
-                  visible: sidebar.isSidebarOpen.isTrue,
-                  child: MainSidebar()),
+                  visible: sidebar.isSidebarOpen.isTrue, child: MainSidebar()),
             ),
             Expanded(
               child: Stack(
