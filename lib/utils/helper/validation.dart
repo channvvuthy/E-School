@@ -64,7 +64,7 @@ class Validation {
     return text[0].toUpperCase() + text.substring(1);
   }
 
-  static messageValidation(Map<String, List<String>> errors) {
+  static makeMessage(Map<String, List<String>> errors) {
     if (errors.isNotEmpty) {
       Get.snackbar(
         "Error",
@@ -105,7 +105,7 @@ class Validation {
       }
     }
 
-    messageValidation(errors);
+    makeMessage(errors);
     return errors;
   }
 }
