@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_eschool/components/text_bold.dart';
+import 'package:flutter_eschool/configs/string.dart';
+import 'package:flutter_eschool/configs/theme_color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class GreetingView extends StatelessWidget {
@@ -19,7 +21,16 @@ class GreetingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(emoji),
+        SvgPicture.asset(
+          emoji,
+          width: 25,
+          height: 25,
+          color: primary,
+        ),
+        SizedBox(
+          width: 10,
+        ),
+        Text(Strings.hello.toUpperCase()),
         SizedBox(
           width: 10,
         ),

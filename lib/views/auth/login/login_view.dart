@@ -98,7 +98,11 @@ class _LoginViewState extends State<LoginView> {
                                   textColor: primary)),
                         )),
                     _buildSpace(),
-                    ButtonWithFill(title: Strings.login, onPressed: onLogin),
+                    ButtonWithFill(
+                      title: Strings.login,
+                      onPressed: onLogin,
+                      borderRadius: 8,
+                    ),
                     _buildSpace(),
                     HasAccountView(onTap: () {
                       Get.toNamed('/register');

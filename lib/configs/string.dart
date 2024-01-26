@@ -14,4 +14,5 @@ class Strings {
   static const String female = 'Female';
   static const String confirmPassword = 'Confirm Password';
   static const String home = 'Home';
+  static const String hello = 'Hello';
 }

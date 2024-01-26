@@ -69,7 +69,7 @@ class Validation {
           return errorMessages.toUpperCase();
         }).join(),
         snackPosition: SnackPosition.TOP,
-        backgroundColor: Colors.red,
+        backgroundColor: red,
         colorText: white,
         borderRadius: 4,
         maxWidth: 450,

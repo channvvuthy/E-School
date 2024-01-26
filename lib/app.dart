@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_eschool/commons/Sidebar.dart';
 import 'package:flutter_eschool/configs/route.dart';
+import 'package:flutter_eschool/configs/theme_color.dart';
+import 'package:flutter_eschool/views/home_view.dart';
 import 'package:flutter_eschool/views/layouts/navbar/main_navbar.dart';
 import 'package:flutter_eschool/views/layouts/partials/nav_action.dart';
 import 'package:get/get.dart';
@@ -31,24 +33,14 @@ class App extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: [
-                  Container(
-                    width: double.infinity,
-                    color: Colors.deepOrangeAccent,
-                    child: Column(
-                      children: [
-                        MainNavbar(),
-                        Expanded(
-                          child: Container(
-                              color: Colors.deepOrangeAccent,
-                              child: InkWell(
-                                onTap: () {
-                                  sidebar.setSidebarOpen();
-                                },
-                                child: Text('Toggle Content'),
-                              )),
-                        ),
-                      ],
-                    ),
+                  Column(
+                    children: [
+                      MainNavbar(),
+                      Expanded(
+                          child: SizedBox(
+                        child: HomeView(),
+                      ))
+                    ],
                   ),
                   NavAction()
                 ],

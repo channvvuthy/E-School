@@ -7,6 +7,7 @@ class ButtonWithFill extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
   final Color backgroundColor;
+  final Color textColor;
   final double borderRadius;
   final double height;
 
@@ -17,6 +18,7 @@ class ButtonWithFill extends StatelessWidget {
     this.backgroundColor = primary,
     this.borderRadius = 4.0,
     this.height = 40.0,
+    this.textColor = white,
   }) : super(key: key);
 
   @override
@@ -24,16 +26,20 @@ class ButtonWithFill extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: height,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
         color: backgroundColor,
       ),
-      child: TextButton(
-        onPressed: onPressed,
-        child: Text(
-          title,
-          style: TextStyle(
-            color: Colors.white, // Adjust text color as needed
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: GestureDetector(
+          onTap: onPressed,
+          child: Text(
+            title,
+            style: TextStyle(
+              color: textColor, // Adjust text color as needed
+            ),
           ),
         ),
       ),

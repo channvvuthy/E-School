@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BackToHome extends StatelessWidget {
   const BackToHome({super.key});
@@ -13,8 +14,10 @@ class BackToHome extends StatelessWidget {
           MouseRegion(
             cursor: SystemMouseCursors.click,
             child: GestureDetector(
-              onTap: () {},
-              child: Text("Home"),
+              onTap: () {
+                Get.toNamed('/');
+              },
+              child: const Text("HOME"),
             ),
           )
         ],

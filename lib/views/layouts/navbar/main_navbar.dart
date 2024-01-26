@@ -15,7 +15,8 @@ class MainNavbar extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 50),
       height: 125,
-      color: Colors.white,
+      decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(width: 1, color: softGrey))),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

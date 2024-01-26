@@ -14,6 +14,7 @@ class HeaderSidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: primary,
       padding: EdgeInsets.only(top: 30, bottom: 30),
       child: Stack(
         children: [

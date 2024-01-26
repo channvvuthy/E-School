@@ -15,15 +15,16 @@ class MainSidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final helper = Helper.instance;
-    return Container(
-      color: primary,
+    return SizedBox(
       width: 350,
       child: Column(
         children: [
           HeaderSidebar(),
           Expanded(
             child: Container(
-              color: white,
+              decoration: BoxDecoration(
+                  border:
+                      Border(right: BorderSide(color: softGrey, width: 1))),
               child: ListView(
                 children: sidebarMenuItems.map((menu) {
                   return ListMenu(
