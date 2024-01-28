@@ -14,7 +14,7 @@ class FeedMediaView extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<Color>(
       future: getDominantColor(
-        'https://images.pexels.com/photos/19923206/pexels-photo-19923206/free-photo-of-a-woman-in-white-shirt-and-jeans-standing-in-a-garden.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/19923206/pexels-photo-19923206/free-photo-of-a-woman-in-white-shirt-and-jeans-standing-in-a-garden.jpeg',
       ),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {

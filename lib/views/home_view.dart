@@ -5,7 +5,9 @@ import 'package:flutter_eschool/configs/theme_color.dart';
 import 'package:flutter_eschool/views/home/partials/benefit_view.dart';
 import 'package:flutter_eschool/views/home/partials/feeds/new_feed_view.dart';
 import 'package:flutter_eschool/views/home/partials/greeting_view.dart';
+import 'package:flutter_eschool/views/home/partials/posts/main_post_view.dart';
 import 'package:flutter_eschool/views/home/partials/recommended/recommended_course.dart';
+import 'package:flutter_eschool/views/home/partials/stories/main_story_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -26,7 +28,13 @@ class _HomeViewState extends State<HomeView> {
               firstName: "Allen",
               lastName: "A. Veazey"),
         ),
-        BenefitView(),
+        SizedBox(
+          height: 180,
+          width: double.infinity,
+          child: MainStoryView(),
+        ),
+        MainPostView(),
+        // BenefitView(),
         Padding(
           padding: const EdgeInsets.all(15),
           child: Row(
